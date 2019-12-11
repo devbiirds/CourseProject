@@ -1,0 +1,17 @@
+D:\Labs\YAP\КП\DVV-2018\MyLibrary\bin\Debug\MyLibrary.dll
+D:\Labs\YAP\КП\DVV-2018\MyLibrary\bin\Debug\MyLibrary.pdb
+D:\Labs\YAP\КП\DVV-2018\MyLibrary\obj\Debug\MyLibrary.csprojAssemblyReference.cache
+D:\Labs\YAP\КП\DVV-2018\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
+D:\Labs\YAP\КП\DVV-2018\MyLibrary\obj\Debug\MyLibrary.dll
+D:\Labs\YAP\КП\DVV-2018\MyLibrary\obj\Debug\MyLibrary.pdb
+D:\Study\MyLanguage\DVV-2018\MyLibrary\bin\Debug\MyLibrary.dll
+D:\Study\MyLanguage\DVV-2018\MyLibrary\bin\Debug\MyLibrary.pdb
+D:\Study\MyLanguage\DVV-2018\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
+D:\Study\MyLanguage\DVV-2018\MyLibrary\obj\Debug\MyLibrary.dll
+D:\Study\MyLanguage\DVV-2018\MyLibrary\obj\Debug\MyLibrary.pdb
+D:\Study\MyLanguage\DVV-2018\MyLibrary\obj\Debug\MyLibrary.csprojAssemblyReference.cache
+D:\Study\MyLanguage\MVM-2019\MyLibrary\bin\Debug\MyLibrary.dll
+D:\Study\MyLanguage\MVM-2019\MyLibrary\bin\Debug\MyLibrary.pdb
+D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
+D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.dll
+D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.pdb

@@ -1,0 +1,34 @@
+﻿  pch.cpp
+  MVM-2019.cpp
+  Error.cpp
+  FST.cpp
+  Generation.cpp
+d:\study\mylanguage\mvm-2019\mvm-2019\generation.cpp(79): warning C4018: >: несоответствие типов со знаком и без знака
+  GRB.cpp
+  ID.cpp
+  In.cpp
+  LEX.cpp
+  LexicalAnalizator.cpp
+d:\study\mylanguage\mvm-2019\mvm-2019\lexicalanalizator.cpp(24): warning C4018: <: несоответствие типов со знаком и без знака
+d:\study\mylanguage\mvm-2019\mvm-2019\lexicalanalizator.cpp(235): warning C4244: =: преобразование "long double" в "int", возможна потеря данных
+d:\study\mylanguage\mvm-2019\mvm-2019\lexicalanalizator.cpp(273): warning C4244: =: преобразование "long double" в "int", возможна потеря данных
+  Log.cpp
+d:\study\mylanguage\mvm-2019\mvm-2019\log.cpp(2): warning C4005: _CRT_SECURE_NO_WARNING: изменение макроопределения
+  d:\study\mylanguage\mvm-2019\mvm-2019\pch.cpp: note: см. предыдущее определение "_CRT_SECURE_NO_WARNING"
+  MFST.cpp
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(102): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(120): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(127): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(141): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE6"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(156): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE5"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(186): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(193): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(196): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(199): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(205): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "MFST_TRACE4"
+d:\study\mylanguage\mvm-2019\mvm-2019\mfst.cpp(258): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
+  Parameter.cpp
+  Semantic.cpp
+d:\study\mylanguage\mvm-2019\mvm-2019\semantic.cpp(105): warning C4101: buf: неиспользованная локальная переменная
+  Создание кода...
+  MVM-2019.vcxproj -> D:\Study\MyLanguage\MVM-2019\Debug\MVM-2019.exe

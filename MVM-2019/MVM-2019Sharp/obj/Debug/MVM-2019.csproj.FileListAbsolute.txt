@@ -1,0 +1,10 @@
+D:\Study\MyLanguage\DVV-2018\MVM-2019\obj\Debug\MVM-2019.csprojAssemblyReference.cache
+D:\Study\MyLanguage\DVV-2018\MVM-2019\obj\Debug\MVM-2019.csproj.CoreCompileInputs.cache
+D:\Study\MyLanguage\DVV-2018\MVM-2019\bin\Debug\MVM-2019.exe.config
+D:\Study\MyLanguage\DVV-2018\MVM-2019\bin\Debug\MVM-2019.exe
+D:\Study\MyLanguage\DVV-2018\MVM-2019\bin\Debug\MVM-2019.pdb
+D:\Study\MyLanguage\DVV-2018\MVM-2019\bin\Debug\MyLibrary.dll
+D:\Study\MyLanguage\DVV-2018\MVM-2019\bin\Debug\MyLibrary.pdb
+D:\Study\MyLanguage\DVV-2018\MVM-2019\obj\Debug\MVM-2019.csproj.CopyComplete
+D:\Study\MyLanguage\DVV-2018\MVM-2019\obj\Debug\MVM-2019.exe
+D:\Study\MyLanguage\DVV-2018\MVM-2019\obj\Debug\MVM-2019.pdb

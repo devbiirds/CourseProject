@@ -1,0 +1,29 @@
+integer func test(string str)
+{
+string a : "string";
+integer p : strlen(str);
+return p; 
+}
+main
+{
+string a : "str";
+integer x : 0x1a; 
+integer y : 4;
+string str : "str"; 
+string  mystr : "mynewstring";
+print(a);
+if (x = y)
+{
+integer m : test(str);
+print("string");
+print (m);
+}
+else
+{
+integer nb : rand();
+print (nb);
+}
+integer z : (x + y) * (x - y); 
+print (z);
+}
+

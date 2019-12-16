@@ -175,51 +175,61 @@ namespace SA
 	}
 	void RetValue(LEX::LexTable& ltable, ID::IdTable& itable)
 	{
+		
 		for (unsigned int i = 0; i < (unsigned int)ltable.size; i++)
 		{
 			ID::IDDATATYPE datatype;
 			if (ltable.table[i].lexema == LEX_FUNCTION && ltable.table[i + 1].lexema == LEX_ID)
 			{
-				for (unsigned int j = 0; j < (unsigned int)itable.size; j++)
-				{
-					if (strcmp(ltable.table[i + 1].buf, itable.table[j].id) == 0)
+				
+					for (unsigned int j = 0; j < (unsigned int)itable.size; j++)
 					{
-						datatype = itable.table[j].iddatatype;
-					}
-				}
-				while (ltable.table[i].lexema != LEX_RETURN)
-				{
-					i++;
-				}
-				if (ltable.table[i + 1].lexema == LEX_ID)
-				{
-					for (unsigned int l = 0; l < (unsigned int)itable.size; l++)
-					{
-						if (strcmp(ltable.table[i + 1].buf, itable.table[l].id) == 0)
+						if (strcmp(ltable.table[i + 1].buf, itable.table[j].id) == 0)
 						{
-							if (datatype != itable.table[l].iddatatype)
+							datatype = itable.table[j].iddatatype;
+						}
+					}
+
+					
+					while (ltable.table[i].lexema != LEX_RETURN)
+					{
+						i++;
+						
+					}
+					
+					if (ltable.table[i + 1].lexema == LEX_ID)
+					{
+						for (unsigned int l = 0; l < (unsigned int)itable.size; l++)
+						{
+							if (strcmp(ltable.table[i + 1].buf, itable.table[l].id) == 0)
 							{
-								throw ERROR_THROW(708, ltable.table[i + 1].sn, ltable.table[i + 1].indxTI);
+								if (datatype != itable.table[l].iddatatype)
+								{
+
+									throw ERROR_THROW(708, ltable.table[i + 1].sn, ltable.table[i + 1].indxTI);
+								}
+							}
+						}
+					}
+					if (ltable.table[i + 1].lexema == LEX_LITERAL)
+					{
+						for (unsigned int l = 0; l < (unsigned int)itable.size; l++)
+						{
+							if (strcmp(ltable.table[i + 1].buf, itable.table[l].value.vstr->str) == 0)
+							{
+								if (datatype != itable.table[l].iddatatype)
+								{
+									throw ERROR_THROW(708, ltable.table[i + 1].sn, ltable.table[i + 1].indxTI);
+								}
 							}
 						}
 					}
 				}
-				if (ltable.table[i + 1].lexema == LEX_LITERAL)
-				{
-					for (unsigned int l = 0; l < (unsigned int)itable.size; l++)
-					{
-						if (strcmp(ltable.table[i + 1].buf, itable.table[l].value.vstr->str) == 0)
-						{
-							if (datatype != itable.table[l].iddatatype)
-							{
-								throw ERROR_THROW(708, ltable.table[i + 1].sn, ltable.table[i + 1].indxTI);
-							}
-						}
-					}
-				}
+				
 			}
+		
 		}
-	}
+	
 	void InicialId(LEX::LexTable& ltable, ID::IdTable& itable)
 	{
 		ID::IDDATATYPE datatype;
@@ -465,13 +475,7 @@ namespace SA
 								throw ERROR_THROW(700, ltable.table[i].sn, ltable.table[i].indxTI);
 							}
 						}
-						if (strcmp(ltable.table[i + 2].buf, itable.table[j].value.vbool) == 0)
-						{
-							if (itable.table[j].iddatatype != ID::STR)
-							{
-								throw ERROR_THROW(700, ltable.table[i].sn, ltable.table[i].indxTI);
-							}
-						}
+						
 					}
 				}
 			}
@@ -503,13 +507,7 @@ namespace SA
 									throw ERROR_THROW(700, ltable.table[i].sn, ltable.table[i].indxTI);
 								}
 							}
-							if (strcmp(ltable.table[i].buf, itable.table[j].value.vbool) == 0)
-							{
-								if (itable.table[j].iddatatype != ID::STR)
-								{
-									throw ERROR_THROW(700, ltable.table[i].sn, ltable.table[i].indxTI);
-								}
-							}
+							
 						}
 					}
 					i++;
@@ -588,5 +586,6 @@ namespace SA
 			}
 		}
 	}
-}
 
+
+	}

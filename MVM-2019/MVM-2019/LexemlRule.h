@@ -25,7 +25,6 @@
     FST::NODE(1, FST::RELATION('n', 3)), \
     FST::NODE(1, FST::RELATION('c', 4)), \
     FST::NODE()
-
 #define FST_RETURN 7, \
 	FST::NODE(1, FST::RELATION('r', 1)),\
 	FST::NODE(1, FST::RELATION('e', 2)),\
@@ -176,6 +175,9 @@
 
 #define FST_RIGHTHESIS 2,	\
 	FST::NODE(1, FST::RELATION(')', 1)),\
+	FST::NODE()
+#define FST_Prosent 2,	\
+	FST::NODE(1, FST::RELATION('%', 1)),\
 	FST::NODE()
 
 #define FST_MORE 2, \

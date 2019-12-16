@@ -1,5 +1,6 @@
 #include "pch.h"
 #pragma warning(disable: 4996)
+#define INT_MAXSIZE    4294967295 
 namespace LA
 {
 	void Lexicalanaliz(char inText[], Log::LOG, LEX::LexTable& lextable, ID::IdTable& idtable)
@@ -7,6 +8,7 @@ namespace LA
 		int line = 0, col = 0, sizeofbuf = 0;
 		bool provsep = false;
 		bool proverka = false;
+		
 		bool newflag = false;
 		bool secondflag = false;
 		bool flag = false;
@@ -77,6 +79,7 @@ namespace LA
 					idType = ID::V;
 					goto link;
 				}
+				
 				FST::FST fststr(buffer, FST_STRING);
 				if (FST::execute(fststr))
 				{
@@ -91,6 +94,7 @@ namespace LA
 				FST::FST fstfunc(buffer, FST_FUNC);
 				if (FST::execute(fstfunc))
 				{
+					
 					LEX::Entry lEntry = { LEX_FUNCTION, line, col };
 					LEX::Add(*ltable, lEntry);
 					idType = ID::F;
@@ -99,6 +103,7 @@ namespace LA
 				FST::FST fstret(buffer, FST_RETURN);
 				if (FST::execute(fstret))
 				{
+			
 					LEX::Entry lEntry = { LEX_RETURN, line, col };
 					LEX::Add(*ltable, lEntry);
 					idType = ID::V;
@@ -150,40 +155,11 @@ namespace LA
 					LEX::Add(*ltable, lEntry);
 					goto link;
 				}
-				FST::FST fstlitbool(buffer, FST_FALSE);
-				FST::FST fstltbool(buffer, FST_TRUE);
-				if (FST::execute(fstlitbool) ||  FST::execute(fstltbool))
-				{
-					LEX::Entry lEntry = { LEX_LITERAL, line, col };
-					lEntry.znak = -1;
-					strcpy(lEntry.buf, buffer);
-					LEX::Add(*ltable, lEntry);
-					ID::Entry iEntry;
-					strcpy(iEntry.id, string);
-					iEntry.iddatatype = ID::BOOL;
-					iEntry.idtype = ID::L;
-					strcpy(iEntry.value.vstr->str, buffer);
-					strcpy(iEntry.value.vbool, buffer);
-					for (int i = 0; i < itable->size; i++)
-					{
-						if (strcmp((*itable).table[i].value.vbool,iEntry.value.vbool) == 0) 
-						{
-							proverka = true;
-							break;
-						}
-						else proverka = false;
-					}
-					iEntry.idxfirstLE = line;
-					if (!proverka)
-					{
-						ID::Add(*itable, iEntry);
-					}
-					goto link;
-				}
+				
 				FST::FST fstid(buffer, FST_ID);
 				if (FST::execute(fstid))
 				{
-					if (strlen(buffer) > 20)
+					if (strlen(buffer) > 10)
 				    throw ERROR_THROW(122, line, col);
 					LEX::Entry lEntry = { LEX_ID, line, col};
 					strcpy(lEntry.buf, buffer);
@@ -230,7 +206,7 @@ namespace LA
 				FST::FST fstHexalLt(buffer, fstHexalLiteral);
 				if (FST::execute(fstHexalLt))
 				{
-					long double bufNum = std::atoi(buffer);
+					long double bufNum = std::stoll(buffer);
 					LEX::Entry lEntry = { LEX_LITERAL, line, col };
 					lEntry.znak = bufNum;
 					strcpy(lEntry.buf, buffer);
@@ -268,7 +244,8 @@ namespace LA
 				FST::FST fstintlit(buffer, FST_INTLIT);
 				if (FST::execute(fstintlit))
 				{
-					long double bufNum = std::atoi(buffer);
+					long long bufNum = std::stoll(buffer);
+					
 					LEX::Entry lEntry = { LEX_LITERAL, line, col };
 					lEntry.znak = bufNum;
 					strcpy(lEntry.buf, buffer);
@@ -278,7 +255,7 @@ namespace LA
 					strcpy(iEntry.id, string);
 					iEntry.iddatatype = ID::INT;
 					iEntry.idtype = ID::L;
-					if (bufNum >= UINT_MAX)
+					if (bufNum > INT_MAXSIZE)
 					{
 						throw ERROR_THROW(121, line, col);
 					}
@@ -427,6 +404,16 @@ namespace LA
 					LEX::Add(*ltable, lEntry);
 					goto link;
 				}
+				FST::FST fstProsent(buffer, FST_Prosent);
+				if (FST::execute(fstProsent))
+				{
+					LEX::Entry lEntry = { LEX_PROSENT, line, col };
+					lEntry.znak = 1;
+					lEntry.priority = 2;
+					LEX::Add(*ltable, lEntry);
+					goto link;
+				}
+
 				FST::FST fststar(buffer, FST_STAR);
 				if (FST::execute(fststar))
 				{

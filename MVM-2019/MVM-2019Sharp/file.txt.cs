@@ -5,34 +5,34 @@ namespace CourseProject
 	class MVM2019
 	{
 
-		static uint xz(string str)
+		static uint test (string str )
 		{
-		string a  = "string";
-		uint p  = ClassLibrary.MyClass.strlen(str);
+		uint p  = ClassLibrary.MyClass.strlen(str );
 		return p ;
 		}
 		static void Main(string[] args)
 		{
-		string a  = "str";
-		uint x  = 0x1a;
-		uint y  = 4;
-		string str  = "str";
-		string mystr  = "mynewstring";
-		bool mb  = false;
-		Console.WriteLine(a);
-		if (x  == y)
+		uint x  = 0x13213;
+		uint y  = 420;
+		string strl  = "str";
+		uint d = 0 ;
+		d  = (((100 + 400 * x ) / 300) - y ) % 2;
+		Console.WriteLine(strl );
+		Console.WriteLine(d );
+		if (x  < y )
 		{
-		uint m  = xz(str);
-		Console.WriteLine("string");
-		Console.WriteLine(m);
+		string m  = "true";
+		uint k  = test (m );
+		Console.WriteLine(k );
+		Console.WriteLine(m );
 		}
 		else
 		{
+		string strll  = "false";
 		uint nb  = ClassLibrary.MyClass.rand();
-		Console.WriteLine(nb);
+		Console.WriteLine(strll );
+		Console.WriteLine(nb );
 		}
-		uint z  = (x  + y) * (x  - y);
-		Console.WriteLine(z);
 		while (Console.ReadKey().Key != ConsoleKey.Enter) {}
 		}
 		

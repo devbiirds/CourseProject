@@ -59,12 +59,11 @@ namespace ID
 				*id.stream << itable.table[i].value.vint;
 			else if (itable.table[i].iddatatype == ID::STR)
 				*id.stream << itable.table[i].value.vstr->str;
-			else if (itable.table[i].iddatatype == ID::BOOL)
-				*id.stream << itable.table[i].value.vbool; 
+			
 			*id.stream << endl;
 		}
 		*id.stream << "Тип ID  1- переменная, 2- литерал, 3 - функция " << endl;
-		*id.stream << "Тип переменной 1- integer, 2- string, 3 - bool. ";
+		*id.stream << "Тип переменной 1- integer, 2- string. ";
 		*id.stream << "\n\n";
 	}
 	void WriteData(Id id)

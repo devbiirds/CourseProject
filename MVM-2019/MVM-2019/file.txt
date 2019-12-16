@@ -1,29 +1,32 @@
 integer func test(string str)
 {
-string a : "string";
+
 integer p : strlen(str);
-return p; 
+return p;
 }
 main
 {
-string a : "str";
-integer x : 0x1a; 
-integer y : 4;
-string str : "str"; 
-string  mystr : "mynewstring";
-print(a);
-if (x = y)
+
+integer x : 0x13213; 
+integer y : 420;
+string strl : "str"; 
+integer d;
+d : (((100 + 400 * x) / 300) - y) % 2 ;
+print(strl);
+print(d);
+if (x < y)
 {
-integer m : test(str);
-print("string");
+string m : "true";
+integer k : test(m);
+print(k);
 print (m);
 }
 else
 {
+string strll : "false";
 integer nb : rand();
+print(strll);
 print (nb);
 }
-integer z : (x + y) * (x - y); 
-print (z);
 }
 

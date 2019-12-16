@@ -16,9 +16,11 @@ namespace Gen
 	void StartGeneration(LEX::LexTable& ltable, ID::IdTable& itable, Gen::Cs& cs)
 	{
 		bool flag = false;
+		bool DefaultInit;
 		START;
 		for (unsigned int i = 0; i < (unsigned int)ltable.size; i++)
 		{
+
 			if (ltable.table[i].lexema == LEX_INTEGER)
 			{
 				if (ltable.table[i + 1].lexema == LEX_FUNCTION)
@@ -33,10 +35,15 @@ namespace Gen
 				{
 					*cs.stream << "string ";
 				}
+				if (strcmp(ltable.table[i].buf, "bool") == 0)
+				{
+					*cs.stream << "bool ";
+				}
 				
 			}
 			if (ltable.table[i].lexema == LEX_LITERAL)
 			{
+				
 				*cs.stream << ltable.table[i].buf;
 			}
 			if (ltable.table[i].lexema == LEX_LIBFUNC)
@@ -53,10 +60,15 @@ namespace Gen
 			}
 			if (ltable.table[i].lexema == LEX_ID)
 			{
-				if (ltable.table[i + 1].lexema == LEX_LEFTHESIS || ltable.table[i + 1].lexema == LEX_RIGHTHESIS || ltable.table[i+1].lexema == LEX_COMMA)
+				if (ltable.table[i+1].lexema == LEX_POINT && strcmp(ltable.table[i-1].buf, "integer") == 0)
 				{
-					*cs.stream << ltable.table[i].buf;
-			    }
+					*cs.stream << ltable.table[i].buf << " = 0 ";
+					
+				}
+				else if (ltable.table[i + 1].lexema == LEX_POINT && strcmp(ltable.table[i - 1].buf, "string") == 0)
+				{
+					*cs.stream << ltable.table[i].buf << " = \"\" ";
+				}
 				else
 				{
 				*cs.stream << ltable.table[i].buf << " ";
@@ -121,6 +133,10 @@ namespace Gen
 			{
 				*cs.stream << " - ";
 			}
+			if (ltable.table[i].lexema == LEX_PROSENT)
+			{
+				*cs.stream << " % ";
+			}
 			if (ltable.table[i].lexema == LEX_STAR)
 			{
 				*cs.stream << " * ";
@@ -131,7 +147,9 @@ namespace Gen
 			}
 			if (ltable.table[i].lexema == LEX_COMPARE)
 			{
+				
 				*cs.stream << " = ";
+				
 			}
 			if (ltable.table[i].lexema == LEX_EQUALLY)
 			{

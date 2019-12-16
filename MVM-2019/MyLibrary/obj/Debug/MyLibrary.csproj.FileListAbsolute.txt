@@ -15,3 +15,4 @@ D:\Study\MyLanguage\MVM-2019\MyLibrary\bin\Debug\MyLibrary.pdb
 D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
 D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.dll
 D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.pdb
+D:\Study\MyLanguage\MVM-2019\MyLibrary\obj\Debug\MyLibrary.csprojAssemblyReference.cache
